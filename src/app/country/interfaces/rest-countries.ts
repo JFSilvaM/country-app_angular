@@ -6,7 +6,7 @@ export interface RESTCountry {
 
 export interface Data {
   _demo: Demo;
-  objects: Object[];
+  objects: RESTCountryObject[];
   meta: Meta;
 }
 
@@ -20,7 +20,7 @@ export interface Meta {
   request_id: string;
 }
 
-export interface Object {
+export interface RESTCountryObject {
   names: Names;
   codes: Codes;
   capitals: Capital[];

@@ -13,7 +13,29 @@
     </thead>
 
     <tbody>
-      <tr></tr>
+      @for (country of countries(); track country.uuid; let index = $index) {
+        <tr>
+          <td>{{ index + 1 }}</td>
+
+          <td>
+            {{ country.flag.emoji }}
+          </td>
+
+          <td>
+            <img [src]="country.flag.url_svg" [alt]="country.name" class="w-10" />
+          </td>
+
+          <td>{{ country.name }}</td>
+
+          <td>{{ country.capitals }}</td>
+
+          <td>{{ country.population }}</td>
+
+          <td>
+            <a class="link-primary cursor-pointer">Más información</a>
+          </td>
+        </tr>
+      }
     </tbody>
   </table>
 </section>
